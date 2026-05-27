@@ -1,0 +1,8 @@
+com/info/email/repository/UsuarioRepository.class
+com/info/email/repository/MensagemRepository.class
+com/info/email/model/Mensagem.class
+com/info/email/security/SecurityConfig.class
+com/info/email/security/SecurityUserDetailsService.class
+com/info/email/controller/LoginController.class
+com/info/email/EmailApplication.class
+com/info/email/model/Usuario.class

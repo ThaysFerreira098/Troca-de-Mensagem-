@@ -1,0 +1,8 @@
+/home/info2025/NetBeansProjects/email/src/main/java/com/info/email/EmailApplication.java
+/home/info2025/NetBeansProjects/email/src/main/java/com/info/email/controller/LoginController.java
+/home/info2025/NetBeansProjects/email/src/main/java/com/info/email/model/Mensagem.java
+/home/info2025/NetBeansProjects/email/src/main/java/com/info/email/model/Usuario.java
+/home/info2025/NetBeansProjects/email/src/main/java/com/info/email/repository/MensagemRepository.java
+/home/info2025/NetBeansProjects/email/src/main/java/com/info/email/repository/UsuarioRepository.java
+/home/info2025/NetBeansProjects/email/src/main/java/com/info/email/security/SecurityConfig.java
+/home/info2025/NetBeansProjects/email/src/main/java/com/info/email/security/SecurityUserDetailsService.java
