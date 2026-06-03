@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+            text-align: center;
+        }
+        h1{
+            font-size: 70px;
+            margin-bottom: 30px;
+        }
+        .login-box{
+            background-color: #FFD9FF;
+            padding: 40px;
+            width: 700px;
+            border-radius: 25px;
+            margin-bottom: 25px;
+        }
+        .campo{
+            display: flex;
+            align-items: center;
+            margin: 35px 0;
+        }
+        .campo label{
+            font-size: 32px;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+        .campo input{
+            flex: 1;
+            border: none;
+            border-bottom: 3px solid black;
+            background: transparent;
+            font-size: 28px;
+            outline: none;
+        }
+        button{
+            background-color: #FFB0F9;
+            border: none;
+            border-radius: 25px;
+            padding: 15px 80px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover{
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        
+        <form th:action="@{/login}" method="post">
+        <div class="login-box">
+            <div class="campo">
+                <label>Usuário:</label>
+                <input type="text" name="username">
+            </div>
+            <div class="campo">
+                <label>Senha:</label>
+                <input type="password" name="password">
+            </div>
+        </div>
+        
+        <button>Entrar</button>
+        </form>
+    </div>
+    
+</body>
+</html>
