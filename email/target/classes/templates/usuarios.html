@@ -1,15 +1,140 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Usuários</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        body{
+            
+            padding:30px;
+        }
+        .topo{
+            display:flex;
+            justify-content:flex-end;
+            gap:40px;
+            margin-bottom:25px;
+        }
+        .opcao{
+            text-align:center;
+        }
+        .opcao span{
+            display:block;
+            font-size:20px;
+            margin-bottom:10px;
+        }
+        .opcao button{
+            background:#d9d9d9;
+            border:none;
+            border-radius:25px;
+            padding:15px 40px;
+            font-size:18px;
+            font-weight:bold;
+            cursor:pointer;
+        }
+        .painel{
+            width:90%;
+            margin:auto;
+            background:#FFD9FF;
+            border-radius:35px;
+            overflow:hidden;
+        }
+        .cabecalho{
+            display:grid;
+            grid-template-columns:3fr 1fr;
+            border-bottom:3px solid black;
+        }
+        .cabecalho div{
+            padding:20px 30px;
+            font-size:32px;
+            font-weight:bold;
+        }
+        .cabecalho .acoes{
+            border-left:3px solid black;
+            text-align:center;
+        }
+        .conteudo{
+            display:grid;
+            grid-template-columns:3fr 1fr;
+            min-height:600px;
+        }
+        .usuarios{
+            padding:25px 30px;
+        }
+        .usuario{
+            font-size:28px;
+            margin-bottom:30px;
+        }
+        .acoes-coluna{
+            border-left:3px solid black;
+            padding:15px;
+        }
+        .linha-acoes{
+            display:flex;
+            justify-content:center;
+            gap:15px;
+            margin-bottom:25px;
+        }
+        .btn-excluir{
+            background:#ff1d1d;
+            color:black;
+            border:none;
+            border-radius:25px;
+            padding:12px 25px;
+            font-size:18px;
+            font-weight:bold;
+            cursor:pointer;
+        }
+        .btn-editar{
+            background:#ffe033;
+            color:black;
+            border:none;
+            border-radius:25px;
+            padding:12px 25px;
+            font-size:18px;
+            font-weight:bold;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="topo">
+    <div class="opcao">
+        <span>admin</span>
+        
+        <form th:action="@{/novousuario}" method="post">
+        <button type="submit">Novo Usuário</button>
+        </form>
+    </div>
+    <div class="opcao">
+        <span>usuário</span>
+        <button>Caixa de Entrada</button>
+    </div>
+</div>
+<div class="painel">
+    <div class="cabecalho">
+        <div>Usuários</div>
+        <div class="acoes">Ações</div>
+    </div>
+    <div class="conteudo">
+        <div class="usuarios">
+            <div class="usuario">usuario</div>
+        </div>
+        <div class="acoes-coluna">
+            <div class="linha-acoes">
+                <button class="btn-excluir">Excluir</button>
+                <button class="btn-editar">Editar</button>
+            </div>
+        </div>
+    </div> 
+
+</div>
+</body>
 </html>

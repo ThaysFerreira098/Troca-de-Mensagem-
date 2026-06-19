@@ -27,4 +27,11 @@ public class LoginController {
         }
         return "redirect:/mensagens";
     }
+    
+    @GetMapping("/usuarios")
+    public String listarUsuarios() {
+        return "usuarios"; 
+    }
+
+    
 }

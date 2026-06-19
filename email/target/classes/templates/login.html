@@ -1,74 +1,87 @@
 <!DOCTYPE html>
-<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<html lang="pt-BR">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
 
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-	<style>
-		body { background: #f2f2f2; }
-		.header {
-			background-color: #3d5a40;
-			color: white;
-			padding: 15px;
-			font-size: 20px;
-			width: 100%;
-		}
-		.form-box {
-			background-color: #ffffff;
-			padding: 30px;
-			border-radius: 8px;
-			box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-		}
-		.input-gray {
-			background-color: #eaeaea;
-			border: none;
-		}
-	</style>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+            text-align: center;
+        }
+        h1{
+            font-size: 70px;
+            margin-bottom: 30px;
+        }
+        .login-box{
+            background-color: #FFD9FF;
+            padding: 40px;
+            width: 700px;
+            border-radius: 25px;
+            margin-bottom: 25px;
+        }
+        .campo{
+            display: flex;
+            align-items: center;
+            margin: 35px 0;
+        }
+        .campo label{
+            font-size: 32px;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+        .campo input{
+            flex: 1;
+            border: none;
+            border-bottom: 3px solid black;
+            background: transparent;
+            font-size: 28px;
+            outline: none;
+        }
+        button{
+            background-color: #FFB0F9;
+            border: none;
+            border-radius: 25px;
+            padding: 15px 80px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover{
+            opacity: 0.9;
+        }
+    </style>
 </head>
-
 <body>
-
-<div class="header d-flex justify-content-between">
-	<span>Login</span>
-</div>
-
-<div class="container mt-5" style="max-width: 520px;">
-	<div class="form-box">
-
-		<h5 class="mb-4">Acessar o sistema</h5>
-
-		<!--
-			SecurityConfig:
-			- loginPage("/login")
-			- formLogin padrão usa POST /login
-			- csrf está disable(), então NÃO precisa do token CSRF no form
-			- parâmetros padrão: username e password
-		-->
-		<form th:action="@{/login}" method="POST">
-
-			<label class="form-label">Login</label>
-			<input type="text"
-				   name="username"
-				   class="form-control input-gray mb-3"
-				   required>
-
-			<label class="form-label">Senha</label>
-			<input type="password"
-				   name="password"
-				   class="form-control input-gray mb-3"
-				   required>
-
-			<button type="submit" class="btn btn-success w-100 mt-2">
-				Entrar
-			</button>
-
-		</form>
-
-	</div>
-</div>
-
+    <div class="container">
+        <h1>Login</h1>
+        <form th:action="@{/login}" method="post">
+        <div class="login-box">
+            <div class="campo">
+                <label>Usuário:</label>
+                <input type="text" name="username">
+            </div>
+            <div class="campo">
+                <label>Senha:</label>
+                <input type="password" name="password">
+            </div>
+        </div>
+        
+        <button>Entrar</button>
+        </form>
+    </div>
+    
 </body>
 </html>
